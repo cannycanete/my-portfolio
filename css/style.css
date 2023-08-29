@@ -1,0 +1,311 @@
+:root {
+    --primary-color: #4D4D4D;
+    --accent-color: #FFB254;
+    --front-color: #FEFEFF;
+
+    --color-1: #B46060;
+    --color-2: #FFBF9B;
+    --color-3: #FFF4E0;
+}
+
+.container {
+    position: relative;
+}
+
+/* TEXTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title-text {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 3rem;
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p,
+.date-text {
+    font-size: 1.25rem;
+}
+
+.white-text {
+    color: var(--color-3);
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* MARGINS, PADDINGS & POSITIONING*/
+/* "m" means margin */
+.m-top {
+    margin-top: 1rem;
+}
+
+.m-top-2 {
+    margin-top: 2rem;
+}
+
+.m-bot {
+    margin-bottom: 1rem;
+}
+
+.m-bot-2 {
+    margin-bottom: 2rem;
+}
+
+.right-pos-m {
+    margin-left: auto;
+}
+
+.pad {
+    padding: 1rem;
+}
+
+.pad-5 {
+    padding: 5rem;
+}
+
+.pad-no-top {
+    padding-top: 0rem;
+}
+
+.offset-top {
+    margin-top: -1rem;
+}
+
+/* DIVIDERS $ DISPLAY */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.equal-flex>div {
+    flex: 1;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* NAV */
+nav ul {
+    /* border: 1px solid white; */
+    display: flex;
+    position: absolute;
+    list-style: none;
+    gap: 3rem;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+}
+
+nav ul li {
+    border: 1px solid transparent;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.active-page {
+    border: 1px solid var(--primary-color);
+    transition: all 1s;
+}
+
+nav ul.white-nav li {
+    color: var(--color-3);
+}
+
+nav ul.white-nav .active-page {
+    border: 1px solid var(--color-3);
+}
+
+/* IMG & ICONS */
+.img-container {
+    width: 100%;
+}
+
+.profile-img {
+    display: block;
+    width: 256px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.contact-icons-container {
+    width: fit-content;
+    margin: auto;
+}
+
+.contact-icons-container p i,
+.contact-icons-container a i {
+    font-size: 2rem;
+}
+
+.contact-icons-container p,
+.contact-icons-container a {
+    font-size: 1rem;
+}
+
+.svg-containers img {
+    width: 50px;
+}
+
+.business-logo {
+    width: 256px;
+}
+
+.tools-logo {
+    width: 64px;
+}
+
+/* DIVS */
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid var(--color-3);
+    border-radius: 1rem;
+}
+
+.panel {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+}
+
+/* MAIN PAGES */
+.pages {
+    display: flex;
+    position: relative;
+    width: 300%;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    transition: all 1s;
+    position: relative;
+}
+
+/* page-1 */
+.one {
+    background-color: var(--color-1);
+}
+
+.two {
+    background-color: var(--color-2);
+}
+
+.three {
+    background-color: var(--color-3);
+}
+
+.page-content {
+    /* border: 1px solid #fff; */
+    width: 50vw;
+}
+
+.page-content-extended {
+    width: 60vw;
+}
+
+/* PAGING DIVS (USED) */
+.paging {
+    height: 100%;
+    width: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 300ms;
+}
+
+.paging:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    cursor: pointer;
+    width: 10vw;
+}
+
+.page-next {
+    right: 0;
+    z-index: 100;
+}
+
+.paging-text-container i {
+    color: var(--primary-color);
+    font-size: 5rem;
+}
+
+#to-about {
+    background-color: var(--color-2);
+}
+
+#to-contact {
+    background-color: var(--color-3);
+}
+
+#to-home {
+    background-color: var(--color-1);
+}
+
+/* PAGE BTNS (UNUSED) */
+.page-btn {
+    background-color: var(--accent-color);
+    padding: 1rem;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+}
+
+.page-btn:hover {
+    cursor: pointer;
+}
+
+.page-btn i {
+    color: var(--front-color);
+    font-size: 1.5rem;
+}
+
+.next-btn {
+    right: 1rem;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.prev-btn {
+    left: 1rem;
+    top: 50%;
+    transform: translate(50%);
+}
