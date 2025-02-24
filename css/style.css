@@ -235,12 +235,12 @@
         margin-top: 3rem;
     }
 
-    a span, p span, p, i{
+    a span, p span, p{
         font-size: 1rem;
     }
 
-    .tools-icon-container {
-        display: flex;
-        flex-direction: row;
+    .icon-text span {
+        width: 80%;
+        word-wrap: break-word;
     }
 }
